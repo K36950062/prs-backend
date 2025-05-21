@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRS Public Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>PRS Public Dashboard</h1>
+  </header>
+
+  <main>
+    <!-- User Profile -->
+    <section class="card" id="profile">
+      <h2>Your Profile</h2>
+      <p><strong>PRS-ID:</strong> <span id="prsId">Loading...</span></p>
+      <p><strong>Role:</strong> Public</p>
+    </section>
+
+    <!-- Vaccination Records -->
+    <section class="card" id="vaccRecords">
+      <h2>Vaccination Records</h2>
+      <ul id="vaccList">
+        <li>Loading...</li>
+      </ul>
+    </section>
+
+    <!-- Stock Locator -->
+    <section class="card" id="locator">
+      <h2>Locate Supplies</h2>
+      <label for="publicItem">Item Name</label>
+      <input type="text" id="publicItem" placeholder="e.g. face-mask" required />
+      <button id="findBtn">Find</button>
+      <pre id="publicLocatorResult">—</pre>
+    </section>
+  </main>
+
+  <script src="js/utils.js"></script>
+  <script src="js/publicdashboard.js"></script>
+</body>
+</html>

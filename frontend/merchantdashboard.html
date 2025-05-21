@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRS Merchant Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>PRS Merchant Dashboard</h1>
+  </header>
+
+  <main>
+    <!-- Current Stock -->
+    <section class="card">
+      <h2>Your Stock</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Last Updated</th>
+          </tr>
+        </thead>
+        <tbody id="stockRows">
+          <tr><td colspan="3">Loading…</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Quick Stock Update -->
+    <section class="card">
+      <h2>Quick Stock Update</h2>
+      <label for="mq_item">Item Name</label>
+      <input type="text" id="mq_item" required />
+
+      <label for="mq_qty">Quantity</label>
+      <input type="number" id="mq_qty" min="0" required />
+
+      <button id="mq_upd">Update</button>
+      <pre id="mq_result">—</pre>
+    </section>
+  </main>
+
+  <script src="js/utils.js"></script>
+  <script src="js/merchantdashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f7f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header */
+  header {
+    background: #2a9d8f;
+    color: white;
+    padding: 2rem 1rem 1.5rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  /* Navigation */
+  nav {
+    background: #e1e8ea;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  nav a {
+    margin: 0 0.75rem;
+    color: #2a9d8f;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main Layout */
+  main {
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Cards */
+  .card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Headings */
+  h2 {
+    color: #264653;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    color: #2a9d8f;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Forms */
+  label {
+    display: block;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="password"],
+  input[type="number"],
+  input[type="file"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* Buttons */
+  button {
+    width: 100%;
+    padding: 0.6rem;
+    background: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #21867a;
+  }
+  
+  /* Result/Status Text */
+  div[id$="Result"],
+  pre[id$="Result"] {
+    margin-top: 0.5rem;
+    white-space: pre-wrap;
+    font-family: monospace;
+    background: #e9ecef;
+    padding: 0.75rem;
+    border-radius: 4px;
+    color: #333;
+    min-height: 1.5rem;
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  thead {
+    background: #f0f0f0;
+  }
+  
+  /* Responsive Fixes */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    main {
+      padding: 1rem;
+      gap: 1rem;
+    }
+  }
+  

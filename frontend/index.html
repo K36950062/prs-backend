@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pandemic Resilience System (PRS)</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Pandemic Resilience System (PRS)</h1>
+    <div style="text-align: right; font-size: 0.9rem; margin-top: -2rem;">
+      <span id="currentTime">Loading time...</span>
+    </div>
+  </header>
+
+  <nav>
+    <div style="display: flex; justify-content: center; gap: 1rem;">
+      <a href="index.html">Home</a>
+      <a href="publicdashboard.html">Public</a>
+      <a href="merchantdashboard.html">Merchant</a>
+      <a href="govdashboard.html">Government</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="card" style="grid-column: 1 / -1;">
+      <h2>👋 Welcome to the PRS System</h2>
+      <p>
+        The Pandemic Resilience System (PRS) is a cross-sector digital infrastructure for pandemic management. 
+        Citizens can enroll and upload vaccination records, merchants can manage supplies, and governments can coordinate national responses.
+      </p>
+    </section>
+
+    <!-- User Tools -->
+    <h2 style="grid-column: 1 / -1;">🧍 Citizen Tools</h2>
+
+    <!-- User Enrollment -->
+    <section class="card">
+      <h3>📝 User Enrollment</h3>
+      <form id="enrollForm">
+        <label for="national_id">National ID</label>
+        <input type="text" id="national_id" required />
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
+
+        <button type="submit">Enroll</button>
+      </form>
+      <div id="enrollResult">—</div>
+    </section>
+
+    <!-- Upload Vaccination JSON -->
+    <section class="card">
+      <h3>📄 Upload Vaccination JSON</h3>
+      <form id="vaccineForm">
+        <label for="vaccineFile">FHIR JSON File</label>
+        <input type="file" id="vaccineFile" accept=".json" required />
+        <button type="submit">Upload JSON</button>
+      </form>
+      <div id="vaccineResult">—</div>
+    </section>
+
+    <!-- Upload Vaccination Certificate -->
+    <section class="card">
+      <h3>📎 Upload Vaccination Certificate (PDF)</h3>
+      <form id="certForm" enctype="multipart/form-data">
+        <label for="certFile">PDF Certificate</label>
+        <input type="file" id="certFile" accept="application/pdf" required />
+        <button type="submit">Upload PDF</button>
+      </form>
+      <div id="certResult">—</div>
+    </section>
+
+    <!-- Merchant Tools -->
+    <h2 style="grid-column: 1 / -1;">🏬 Merchant Tools</h2>
+
+    <!-- Merchant Stock Update -->
+    <section class="card">
+      <h3>📦 Update Stock</h3>
+      <form id="stockForm">
+        <label for="merchant_id">Merchant ID</label>
+        <input type="text" id="merchant_id" required />
+
+        <label for="item_name">Item Name</label>
+        <input type="text" id="item_name" required />
+
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" min="0" required />
+
+        <button type="submit">Update Stock</button>
+      </form>
+      <div id="stockResult">—</div>
+    </section>
+
+    <!-- Shared Tools -->
+    <h2 style="grid-column: 1 / -1;">🔍 Shared Tools</h2>
+
+    <!-- Stock Locator -->
+    <section class="card">
+      <h3>🧭 Find Available Stock</h3>
+      <form id="locatorForm">
+        <label for="item_query">Item Name</label>
+        <input type="text" id="item_query" required />
+        <button type="submit">Locate</button>
+      </form>
+      <div id="locatorResult">—</div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/utils.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+    // Clock script
+    const clock = document.getElementById('currentTime');
+    setInterval(() => {
+      clock.innerText = new Date().toLocaleString();
+    }, 1000);
+  </script>
+</body>
+</html>
